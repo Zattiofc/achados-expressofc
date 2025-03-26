@@ -29,8 +29,8 @@ export const Header = () => {
           </div>
           <div className="hidden md:block text-sm">
             <span className="font-medium">Atendimento via WhatsApp: </span>
-            <a href="https://wa.me/5511999999999" className="underline hover:text-white/80">
-              (11) 99999-9999
+            <a href="https://wa.me/5511955573233" className="underline hover:text-white/80">
+              (11) 95557-3233
             </a>
           </div>
         </div>

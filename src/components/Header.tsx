@@ -45,7 +45,7 @@ export const Header = () => {
               <ShoppingBag className="w-6 h-6 text-green-600" />
             </div>
             <span className="font-bold text-xl bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-              ShopExpress
+              Achados Express Store
             </span>
           </a>
 

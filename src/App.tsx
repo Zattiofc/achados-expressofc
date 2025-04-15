@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Timer, Shield, Truck, Package, CheckCircle, Phone, Star, ArrowRight, Lock, CreditCard } from 'lucide-react';
+import { Timer, Shield, Truck, Package, CheckCircle, Phone, Star, ArrowRight, Lock, CreditCard, Zap, Target, Heart, Smile } from 'lucide-react';
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -37,6 +37,13 @@ function App() {
     { initials: 'R.M.', age: 45, text: 'Recuperei minha confiança em apenas algumas semanas de uso. Resultado impressionante!', rating: 5 },
     { initials: 'J.P.', age: 38, text: 'Minha esposa notou a diferença já na primeira semana. Nossa vida íntima mudou completamente.', rating: 5 },
     { initials: 'M.S.', age: 52, text: 'Depois dos 50, pensei que não tinha mais jeito. O Rivosex provou que eu estava errado.', rating: 5 }
+  ];
+
+  const benefits = [
+    { icon: Zap, title: 'Ação Imediata', description: 'Resultados em até 30 minutos após a aplicação' },
+    { icon: Target, title: 'Precisão Total', description: 'Atua exatamente onde você precisa' },
+    { icon: Heart, title: 'Relacionamento', description: 'Melhora significativa na vida íntima' },
+    { icon: Smile, title: 'Autoestima', description: 'Recupere sua confiança natural' }
   ];
 
   return (
@@ -105,6 +112,74 @@ function App() {
           </div>
         </div>
       </header>
+
+      {/* Product Description */}
+      <section className="bg-gradient-to-r from-red-900/20 to-black py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Descubra o Poder do Rivosex</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="bg-black/30 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-yellow-400">O Que é Rivosex?</h3>
+                  <p className="text-gray-300">
+                    Rivosex é um gel revolucionário desenvolvido com ingredientes naturais que proporcionam resultados impressionantes em apenas 30 minutos. Nossa fórmula exclusiva foi cientificamente desenvolvida para maximizar seu desempenho e confiança.
+                  </p>
+                </div>
+                <div className="bg-black/30 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-yellow-400">Como Funciona?</h3>
+                  <p className="text-gray-300">
+                    Sua fórmula avançada age diretamente nos tecidos, promovendo uma melhor circulação sanguínea e aumentando a sensibilidade local. O resultado é uma experiência mais intensa e duradoura, com total segurança.
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="bg-black/30 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-yellow-400">Por Que Você Precisa?</h3>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                      <span>Melhora significativa no desempenho e duração</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                      <span>Aumento da confiança e autoestima</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                      <span>Relacionamentos mais satisfatórios</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                      <span>Resultados imediatos e duradouros</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-black/30 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-yellow-400">Quem Deve Usar?</h3>
+                  <p className="text-gray-300">
+                    Rivosex é ideal para homens que desejam melhorar seu desempenho, aumentar a confiança e proporcionar experiências mais intensas. Seja qual for sua idade ou condição, nosso produto oferece resultados seguros e eficazes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Grid */}
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-12 text-center">Benefícios Exclusivos</h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="bg-gradient-to-br from-red-900/20 to-black p-6 rounded-lg text-center transform hover:-translate-y-1 transition-transform duration-300">
+              <benefit.icon className="w-12 h-12 mx-auto mb-4 text-yellow-600" />
+              <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
+              <p className="text-gray-300">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Problem Section */}
       <section className="bg-black/50 py-16">
